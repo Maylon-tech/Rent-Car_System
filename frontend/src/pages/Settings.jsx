@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { useTheme } from '../context/ThemeContext'
 import Button from '../components/ui/Button'
 
 const serviceOptions = [
@@ -9,7 +8,6 @@ const serviceOptions = [
 ]
 
 const Settings = () => {
-  const { isDark, toggleTheme } = useTheme()
   const [selectedServices, setSelectedServices] = useState([])
 
   const toggleService = (service) => {
@@ -42,7 +40,7 @@ const Settings = () => {
             </p>
           </div>
 
-          <button
+          {/* <button
             type="button"
             aria-label="Toggle dark theme"
             onClick={toggleTheme}
@@ -53,7 +51,7 @@ const Settings = () => {
               className="absolute top-1 h-5 w-5 rounded-full bg-white transition-transform duration-300"
               style={{ transform: isDark ? 'translateX(0px)' : 'translateX(-22px)' }}
             />
-          </button>
+          </button> */}
         </div>
       </div>
 

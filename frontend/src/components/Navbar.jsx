@@ -5,10 +5,10 @@ import { IoClose, IoPersonSharp } from 'react-icons/io5'
 import { IoMdSettings } from 'react-icons/io'
 import { MdLogout } from 'react-icons/md'
 import { useAuth } from '../context/AuthContext'
-import { useTheme } from '../context/ThemeContext'
+
 
 const Navbar = () => {
-  const { isDark, toggleTheme } = useTheme()
+
   const { logout } = useAuth()
   const navigate = useNavigate()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -37,7 +37,7 @@ const Navbar = () => {
       </Link>
 
       <div className="flex items-center gap-3">
-        <button
+        {/* <button
           type="button"
           aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
           onClick={toggleTheme}
@@ -49,7 +49,7 @@ const Navbar = () => {
           }}
         >
           {isDark ? <FaRegSun size={18} /> : <FaRegMoon size={18} />}
-        </button>
+        </button> */}
 
         <div className="relative">
           <button

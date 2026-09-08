@@ -4,7 +4,7 @@ import { Navigate, Outlet, useLocation } from 'react-router-dom'
 
 const AuthContext = createContext(null)
 
-const API_URL = 'http://localhost:7000'
+const API_URL = 'http://localhost:7007'
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null)

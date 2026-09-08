@@ -16,11 +16,9 @@ import DarkMode from './pages/DarkMode'
 import { AppDataProvider } from './context/AppDataContext'
 import { AuthProvider, ProtectedRoute } from './context/AuthContext'
 import { SidebarProvider } from './context/SidebarContext'
-import { ThemeProvider } from './context/ThemeContext'
 
 function App() {
   return (
-    <ThemeProvider>
       <AuthProvider>
         <SidebarProvider>
           <AppDataProvider>
@@ -45,7 +43,6 @@ function App() {
           </AppDataProvider>
         </SidebarProvider>
       </AuthProvider>
-    </ThemeProvider>
   )
 }
 
