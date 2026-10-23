@@ -13,6 +13,7 @@ import AuthLayout from './components/AuthLayout'
 import Services from './pages/Services'
 import Settings from './pages/Settings'
 import DarkMode from './pages/DarkMode'
+import RentDetailPage from './pages/RentDetailPage'
 import { AppDataProvider } from './context/AppDataContext'
 import { AuthProvider, ProtectedRoute } from './context/AuthContext'
 import { SidebarProvider } from './context/SidebarContext'
@@ -31,6 +32,7 @@ function App() {
               <Route element={<ProtectedRoute />}>
                 <Route element={<MainLayout />}>
                   <Route path="/" element={<Home />} />
+                  <Route path="/rentDetail/:id" element={<RentDetailPage />} />
                   <Route path="/rentCar" element={<RentCar />} />
                   <Route path="/carsList" element={<CarsList />} />
                   <Route path="/clientList" element={<ClientList />} />

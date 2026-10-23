@@ -1,3 +1,6 @@
+
+import {Link} from 'react-router-dom'
+
 const DataTable = ({ columns, data }) => {
   return (
     <div className="w-full overflow-hidden rounded-lg border border-white/10 bg-[var(--color-darkblue-soft)]">
@@ -14,10 +17,12 @@ const DataTable = ({ columns, data }) => {
         <tbody className="divide-y divide-white/10 text-[var(--color-white)]">
           {data.map((item) => (
             <tr key={item.id} className="transition-colors hover:bg-white/5">
-              {columns.map((column) => (
-                <td key={column.key} className="px-4 py-3 text-sm">
-                  {column.render ? column.render(item) : item[column.key]}
-                </td>
+              {columns.map((column) => ( 
+                <Link to={`/rentDetail/${column.id}`}>
+                  <td key={column.key} className="px-4 py-3 text-sm">
+                    {column.render ? column.render(item) : item[column.key]}
+                  </td>
+                </Link>                
               ))}
             </tr>
           ))}

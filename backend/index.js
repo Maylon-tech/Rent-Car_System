@@ -12,7 +12,7 @@ dotenv.config()
 const app = express()
 app.use(cors())
 app.use(express.json())
-const PORT = process.env.PORT || 7007
+const PORT = process.env.PORT || 5004
 
 app.use("/api/auth", userRoute)
 app.use("/api/cars", CarRouter)

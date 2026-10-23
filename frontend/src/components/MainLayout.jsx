@@ -8,7 +8,7 @@ const MainLayout = () => {
   const { isOpen } = useSidebar()
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--bg-primary2)', color: 'var(--text-primary)' }}>
       <header className="fixed left-0 top-0 z-20 w-full">
         <Navbar />
       </header>

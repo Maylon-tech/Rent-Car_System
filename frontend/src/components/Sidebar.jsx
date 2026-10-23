@@ -62,7 +62,7 @@ const Sidebar = () => {
       className={`fixed left-0 top-[80px] z-10 h-[calc(100vh-89px)] transition-all duration-300 ease-in-out ${
         isOpen ? 'w-64' : 'w-24'
       } px-4 py-6 shadow-xl`}
-      style={{ backgroundColor: 'var(--bg-secondary)' }}
+      style={{ backgroundColor: 'var(--bg-secondary2)' }}
     >
       <button
         type="button"

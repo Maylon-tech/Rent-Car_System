@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <nav
       className="flex w-full items-center justify-between border-b border-[var(--color-darkblue)] px-6 py-4 shadow-sm"
-      style={{ backgroundColor: 'var(--bg-secondary)', borderColor: 'var(--color-darkblue)' }}
+      style={{ backgroundColor: 'var(--bg-secondary2)', borderColor: 'var(--color-darkblue)' }}
     >
       <Link
         to="/"
@@ -51,7 +51,11 @@ const Navbar = () => {
           {isDark ? <FaRegSun size={18} /> : <FaRegMoon size={18} />}
         </button> */}
 
-        <div className="relative">
+        <div className="relative flex gap-4">
+          <div className="flex gap-4 py-1 px-2 border-2 border-orange-300 rounded-full">
+            <p className='text-white'>icon</p>
+            <input type="text" placeholder='searching...' className='text-gray-100 border-b border-blue-400' />
+          </div>
           <button
             type="button"
             aria-label="Open user profile"
@@ -66,6 +70,7 @@ const Navbar = () => {
             <IoPersonSharp size={20} />
           </button>
 
+            {/* MENU DROPDOWN */}
           <div
             className={`absolute right-0 top-14 z-20 w-56 overflow-hidden rounded-xl border border-white/10 shadow-2xl transition-all duration-300 ${
               isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0 pointer-events-none'
